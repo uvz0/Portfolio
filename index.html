@@ -1,896 +1,173 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>uvz0 — portfolio</title>
-    <link rel="stylesheet" href="app.css" />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImhleC1ncmFkIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwYzhmZiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2ZDI4ZDkiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8ZmlsdGVyIGlkPSJnbG93Ij4KICAgICAgPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMS4yIiByZXN1bHQ9ImJsdXIiLz4KICAgICAgPGZlTWVyZ2U+PGZlTWVyZ2VOb2RlIGluPSJibHVyIi8+PGZlTWVyZ2VOb2RlIGluPSJTb3VyY2VHcmFwaGljIi8+PC9mZU1lcmdlPgogICAgPC9maWx0ZXI+CiAgPC9kZWZzPgogIDwhLS0gZGFyayBiZyAtLT4KICA8cmVjdCB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIGZpbGw9IiMwNjBlMWMiLz4KICA8IS0tIGhleGFnb246IGZsYXQtdG9wLCBjZW50ZXJlZCAtLT4KICA8cG9seWdvbgogICAgcG9pbnRzPSIxNiwzIDI3LjgsOS41IDI3LjgsMjIuNSAxNiwyOSA0LjIsMjIuNSA0LjIsOS41IgogICAgZmlsbD0ibm9uZSIKICAgIHN0cm9rZT0idXJsKCNoZXgtZ3JhZCkiCiAgICBzdHJva2Utd2lkdGg9IjEuOCIKICAgIGZpbHRlcj0idXJsKCNnbG93KSIKICAvPgogIDwhLS0gaW5uZXIgc21hbGxlciBoZXggLS0+CiAgPHBvbHlnb24KICAgIHBvaW50cz0iMTYsOCAyMy41LDEyLjI1IDIzLjUsMjAuNzUgMTYsMjUgOC41LDIwLjc1IDguNSwxMi4yNSIKICAgIGZpbGw9InVybCgjaGV4LWdyYWQpIgogICAgb3BhY2l0eT0iMC4xNSIKICAvPgogIDwhLS0gY2VudGVyIGRvdCAtLT4KICA8Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIyLjIiIGZpbGw9IiMwMGM4ZmYiIG9wYWNpdHk9IjAuOSIgZmlsdGVyPSJ1cmwoI2dsb3cpIi8+Cjwvc3ZnPg==">
-    <script src="app.js" defer></script>
-    <style>
-      /* ── KONAMI ── */
-      main {
-        transition:
-          transform 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
-          filter 1.5s ease;
-      }
-      main.inverted {
-        transform: rotate(180deg);
-        filter: hue-rotate(180deg);
-      }
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jayed — uvz0</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj4KICA8cmVjdCB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIGZpbGw9IiMwODA4MWEiIHJ4PSI2Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSIxNiwyLjUgMjgsOS4yNSAyOCwyMi43NSAxNiwyOS41IDQsMjIuNzUgNCw5LjI1IiBmaWxsPSJub25lIiBzdHJva2U9IiM4YjVjZjYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDxjaXJjbGUgY3g9IjE2IiBjeT0iMTYiIHI9IjIuNSIgZmlsbD0iIzIyZDNlZSIvPgo8L3N2Zz4K">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="app.css"/>
+</head>
+<body>
 
-      /* ── BRAND EGG ── */
-      .egg-btn {
-        background: none;
-        border: none;
-        font: inherit;
-        color: inherit;
-        padding: 0;
-        cursor: crosshair;
-      }
+  <canvas id="starfield"></canvas>
+  <div id="cursor-orb" aria-hidden="true"></div>
+  <canvas id="cursor-trail" aria-hidden="true"></canvas>
+  <div class="scrollbar" aria-hidden="true"></div>
+  <audio id="lofi-audio" loop></audio>
 
-      /* ── KONAMI HINT ── visible in footer, pulses on load */
-      .secret-hint {
-        font-family: ui-monospace, Consolas, monospace;
-        font-size: 11px;
-        color: rgba(0, 200, 255, 0.22);
-        margin-top: 8px;
-        cursor: crosshair;
-        letter-spacing: 0.06em;
-        transition:
-          color 0.4s ease,
-          text-shadow 0.4s ease;
-        border: 1px solid rgba(0, 200, 255, 0.1);
-        border-radius: 4px;
-        display: inline-block;
-        padding: 4px 10px;
-        clip-path: polygon(
-          0 0,
-          calc(100% - 6px) 0,
-          100% 6px,
-          100% 100%,
-          6px 100%,
-          0 calc(100% - 6px)
-        );
-      }
-      .secret-hint:hover {
-        color: rgba(0, 200, 255, 0.9);
-        text-shadow: 0 0 10px rgba(0, 200, 255, 0.5);
-        border-color: rgba(0, 200, 255, 0.4);
-        box-shadow: 0 0 14px rgba(0, 200, 255, 0.12);
-      }
-      /* the pulse that makes it discoverable */
-      @keyframes konami-pulse {
-        0% {
-          color: rgba(0, 200, 255, 0.22);
-          border-color: rgba(0, 200, 255, 0.1);
-          box-shadow: none;
-        }
-        40% {
-          color: rgba(0, 200, 255, 0.85);
-          border-color: rgba(0, 200, 255, 0.5);
-          box-shadow: 0 0 18px rgba(0, 200, 255, 0.25);
-          text-shadow: 0 0 10px rgba(0, 200, 255, 0.5);
-        }
-        100% {
-          color: rgba(0, 200, 255, 0.22);
-          border-color: rgba(0, 200, 255, 0.1);
-          box-shadow: none;
-        }
-      }
-      .hint-pulse {
-        animation: konami-pulse 1.4s ease-in-out;
-      }
+  <main id="main">
 
-      /* ── BACKGROUND SHAPES ── */
-      .bg-shapes {
-        position: fixed;
-        inset: 0;
-        pointer-events: none;
-        z-index: -1;
-        overflow: hidden;
-      }
-      .bg-shape {
-        position: absolute;
-        border: 1px solid rgba(0, 200, 255, 0.07);
-        border-radius: 4px;
-        opacity: 0.6;
-        animation: shape-float var(--dur, 20s) linear infinite;
-      }
-      /* triangles via clip-path */
-      .bg-shape.tri {
-        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-        background: rgba(0, 200, 255, 0.03);
-        border: none;
-      }
-      .bg-shape.ring {
-        border-radius: 50%;
-        background: transparent;
-        border-color: rgba(109, 40, 217, 0.1);
-      }
-      .bg-shape.sq {
-        background: rgba(0, 200, 255, 0.02);
-      }
-
-      @keyframes shape-float {
-        0% {
-          transform: translateY(0) rotate(0deg) scale(1);
-          opacity: 0;
-        }
-        8% {
-          opacity: 0.6;
-        }
-        92% {
-          opacity: 0.6;
-        }
-        100% {
-          transform: translateY(-110vh) rotate(360deg) scale(0.6);
-          opacity: 0;
-        }
-      }
-
-      /* ── TOPBAR ── */
-      .topbar {
-        position: sticky;
-        top: 0;
-        z-index: 30;
-        backdrop-filter: blur(16px);
-        background: rgba(5, 10, 22, 0.72);
-        border-bottom: 1px solid rgba(0, 200, 255, 0.12);
-        box-shadow:
-          0 1px 0 rgba(0, 200, 255, 0.05),
-          0 4px 20px rgba(0, 0, 0, 0.4);
-      }
-      .topbar-inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 12px 0;
-        gap: 14px;
-      }
-      .brand {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-      }
-      .sig {
-        font-family: ui-monospace, Consolas, monospace;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        font-size: 12px;
-        color: rgba(0, 200, 255, 0.9);
-        text-shadow: 0 0 8px rgba(0, 200, 255, 0.4);
-      }
-
-      .dot {
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: #00c8ff;
-        box-shadow:
-          0 0 0 3px rgba(0, 200, 255, 0.15),
-          0 0 10px rgba(0, 200, 255, 0.6);
-        animation: dot-ping 2.4s ease-in-out infinite;
-      }
-      @keyframes dot-ping {
-        0%,
-        100% {
-          box-shadow:
-            0 0 0 3px rgba(0, 200, 255, 0.15),
-            0 0 10px rgba(0, 200, 255, 0.5);
-        }
-        50% {
-          box-shadow:
-            0 0 0 6px rgba(0, 200, 255, 0.06),
-            0 0 18px rgba(0, 200, 255, 0.7);
-        }
-      }
-      .nav {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-      }
-      .navlink {
-        border: 0;
-        background: transparent;
-        color: rgba(226, 240, 255, 0.65);
-        cursor: pointer;
-        padding: 7px 12px;
-        border-radius: 4px;
-        font-size: 13px;
-        letter-spacing: 0.04em;
-        transition:
-          background 160ms,
-          color 160ms,
-          text-shadow 160ms;
-        transform: translate3d(var(--mag-x, 0px), var(--mag-y, 0px), 0);
-      }
-      .navlink:hover {
-        background: rgba(0, 200, 255, 0.07);
-        color: rgba(0, 200, 255, 0.95);
-        text-shadow: 0 0 8px rgba(0, 200, 255, 0.4);
-      }
-      .pill {
-        font-family: ui-monospace, Consolas, monospace;
-        font-size: 11px;
-        color: rgba(0, 200, 255, 0.85);
-        letter-spacing: 0.06em;
-      }
-
-      /* ── HERO ── */
-      .hero {
-        padding-top: 68px;
-      }
-      .h2 {
-        font-size: clamp(22px, 2.2vw, 30px);
-        letter-spacing: -0.03em;
-        margin: 10px 0 0;
-      }
-      .h3 {
-        font-size: 20px;
-        letter-spacing: -0.02em;
-        margin: 8px 0 0;
-      }
-      .glow {
-        display: inline-flex;
-        vertical-align: bottom;
-        line-height: inherit;
-      }
-
-      .glow-letter {
-        display: inline-block;
-        position: relative;
-        overflow: hidden;
-        line-height: 1.05;
-        padding-bottom: 0.08em;
-
-        /* the real text node inside sizes the box — make it transparent */
-        color: transparent;
-      }
-
-      /* ── GHOST — static behind layer, never moves ── */
-      .glow-ghost {
-        position: absolute;
-        inset: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        background: linear-gradient(180deg, #00c8ff 0%, #6d28d9 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-
-        /* faint — this is the "imprint" */
-        opacity: 0.18;
-        filter: blur(3px) drop-shadow(0 0 10px rgba(0, 200, 255, 0.6));
-        pointer-events: none;
-        user-select: none;
-      }
-
-      /* ── BEFORE — the real visible sliding letter ── */
-      .glow-letter::before {
-        content: attr(data-char);
-        position: absolute;
-        inset: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        background: linear-gradient(180deg, #00c8ff 0%, #6d28d9 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        filter: drop-shadow(0 0 18px rgba(0, 200, 255, 0.5))
-          drop-shadow(0 0 40px rgba(109, 40, 217, 0.3));
-
-        transform: translateY(0);
-        transition: transform 0.42s cubic-bezier(0.76, 0, 0.24, 1);
-        transition-delay: calc(var(--li) * 38ms);
-      }
-
-      /* ── AFTER — new color letter rising from below ── */
-      .glow-letter::after {
-        content: attr(data-char);
-        position: absolute;
-        inset: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        background: linear-gradient(180deg, #ff9500 0%, #ff2d6b 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        filter: drop-shadow(0 0 16px rgba(255, 149, 0, 0.8))
-          drop-shadow(0 0 36px rgba(255, 45, 107, 0.5));
-
-        transform: translateY(110%);
-        transition: transform 0.42s cubic-bezier(0.76, 0, 0.24, 1);
-        transition-delay: calc(var(--li) * 38ms);
-      }
-
-      /* ── HOVER: real slides up, new slides in ── */
-      .glow:hover .glow-letter::before {
-        transform: translateY(-110%);
-      }
-      .glow:hover .glow-letter::after {
-        transform: translateY(0);
-      }
-
-      .glow:hover .glow-letter {
-        filter: drop-shadow(0 0 24px rgba(255, 100, 0, 0.5));
-      }
-      .em {
-        color: rgba(0, 200, 255, 0.9);
-      }
-      .ctas {
-        margin-top: 18px;
-      }
-
-      /* contest badge */
-      .contest-badge {
-        color: #fbbf24;
-        text-shadow:
-          0 0 10px rgba(251, 191, 36, 0.7),
-          0 0 22px rgba(251, 191, 36, 0.3);
-        animation: badge-pulse 3s ease-in-out infinite;
-      }
-      @keyframes badge-pulse {
-        0%,
-        100% {
-          text-shadow:
-            0 0 10px rgba(251, 191, 36, 0.7),
-            0 0 22px rgba(251, 191, 36, 0.3);
-        }
-        50% {
-          text-shadow:
-            0 0 20px rgba(251, 191, 36, 1),
-            0 0 45px rgba(251, 191, 36, 0.5);
-        }
-      }
-
-      /* stats */
-      .stats {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        gap: 12px;
-      }
-      .stat {
-        grid-column: span 4;
-        padding: 12px 12px 10px;
-      }
-      .stat-num {
-        font-size: 26px;
-        letter-spacing: -0.03em;
-        color: #00c8ff;
-        font-family: ui-monospace, Consolas, monospace;
-      }
-      .stat-label {
-        margin-top: 4px;
-        color: rgba(226, 240, 255, 0.5);
-        font-size: 13px;
-      }
-      .stat:hover .stat-num {
-        text-shadow: 0 0 14px rgba(0, 200, 255, 0.7);
-        transition: text-shadow 0.3s;
-      }
-      @media (max-width: 860px) {
-        .stat {
-          grid-column: span 12;
-        }
-      }
-
-      /* ── PROJECTS ── */
-      .project {
-        position: relative;
-        overflow: hidden;
-      }
-      .project::before {
-        content: "";
-        position: absolute;
-        inset: -2px;
-        background: linear-gradient(
-          135deg,
-          rgba(0, 200, 255, 0.06) 0%,
-          transparent 50%,
-          rgba(109, 40, 217, 0.06) 100%
-        );
-        pointer-events: none;
-        border-radius: inherit;
-      }
-      .project > * {
-        position: relative;
-      }
-      .project-head {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        gap: 12px;
-      }
-      .project-desc {
-        margin: 12px 0 0;
-        color: rgba(226, 240, 255, 0.65);
-        line-height: 1.65;
-      }
-      .project:hover .project-title {
-        background: linear-gradient(90deg, #6d28d9, #00c8ff);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-      }
-      /* corner accent on project cards */
-      .project::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 40px;
-        height: 40px;
-        background: linear-gradient(
-          225deg,
-          rgba(0, 200, 255, 0.15) 0%,
-          transparent 60%
-        );
-        pointer-events: none;
-      }
-
-      /* ── SKILLS ── */
-      .grid.skills {
-        grid-template-columns: repeat(12, 1fr);
-      }
-      .grid.skills > .card {
-        grid-column: span 6;
-      }
-      @media (max-width: 860px) {
-        .grid.skills > .card {
-          grid-column: span 12;
-        }
-      }
-
-      /* ── HIRE ── */
-      .hire {
-        max-width: 760px;
-      }
-      .toast {
-        margin-top: 14px;
-        border: 1px solid rgba(0, 200, 255, 0.3);
-        background: rgba(0, 200, 255, 0.06);
-        padding: 10px 14px;
-        border-radius: 6px;
-        width: fit-content;
-        box-shadow: 0 0 14px rgba(0, 200, 255, 0.12);
-        clip-path: polygon(
-          0 0,
-          calc(100% - 6px) 0,
-          100% 6px,
-          100% 100%,
-          6px 100%,
-          0 calc(100% - 6px)
-        );
-      }
-
-      /* ── FOOTER ── */
-      .footer {
-        padding: 28px 0 50px;
-        border-top: 1px solid rgba(0, 200, 255, 0.1);
-        background: rgba(4, 9, 18, 0.5);
-      }
-      .footer-inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 14px;
-        flex-wrap: wrap;
-      }
-      .footlink {
-        color: rgba(226, 240, 255, 0.55);
-        border-bottom: 1px solid transparent;
-        padding-bottom: 2px;
-        font-size: 13px;
-      }
-      .footlink:hover {
-        color: rgba(0, 200, 255, 0.9);
-        border-bottom-color: rgba(0, 200, 255, 0.35);
-        text-shadow: 0 0 8px rgba(0, 200, 255, 0.3);
-      }
-
-      /* ── OVERLAYS ── */
-      .overlay {
-        position: fixed;
-        inset: 0;
-        z-index: 60;
-        display: grid;
-        place-items: center;
-        background: rgba(2, 6, 16, 0.82);
-        backdrop-filter: blur(12px);
-        padding: 20px;
-      }
-      .hidden { display: none; }
-      .overlay.hidden {
-        display: none;
-      }
-      .modal {
-        width: min(560px, 100%);
-      }
-      .modal-title {
-        margin-top: 10px;
-        font-size: 22px;
-        letter-spacing: -0.02em;
-      }
-      .intro {
-        width: min(760px, 100%);
-      }
-      .intro-line {
-        margin-top: 12px;
-        font-size: clamp(18px, 2.1vw, 26px);
-        line-height: 1.2;
-        letter-spacing: -0.02em;
-      }
-      .cursor {
-        display: inline-block;
-        width: 1ch;
-        color: #00c8ff;
-        text-shadow: 0 0 8px rgba(0, 200, 255, 0.9);
-        animation: blink 900ms steps(2, end) infinite;
-      }
-      @keyframes blink {
-        0%,
-        49% {
-          opacity: 1;
-        }
-        50%,
-        100% {
-          opacity: 0;
-        }
-      }
-
-      /* ── JUMPSCARE ── */
-      .jumpscare {
-        background: #000;
-        animation: shake 140ms linear infinite;
-      }
-      .jumpscare-img {
-        width: 100vw;
-        height: 100vh;
-        object-fit: fill;
-        pointer-events: none;
-      }
-      @keyframes shake {
-        0% {
-          transform: translate3d(0, 0, 0);
-        }
-        25% {
-          transform: translate3d(6px, -3px, 0);
-        }
-        50% {
-          transform: translate3d(-5px, 4px, 0);
-        }
-        75% {
-          transform: translate3d(4px, 2px, 0);
-        }
-        100% {
-          transform: translate3d(0, 0, 0);
-        }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        .cursor {
-          animation: none;
-        }
-        .jumpscare {
-          animation: none;
-        }
-        .bg-shape {
-          animation: none;
-          display: none;
-        }
-        .dot {
-          animation: none;
-        }
-        .contest-badge {
-          animation: none;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="bg-shapes" aria-hidden="true" id="bg-shapes"></div>
-    <!-- Scroll progress bar -->
-    <div class="scrollbar" aria-hidden="true"></div>
-
-    <!-- Lo-fi audio -->
-    <audio id="lofi-audio" loop></audio>
-
-    <!-- Floating particles -->
-    <div class="particles" aria-hidden="true" id="particles"></div>
-
-    <main id="main">
-      <!-- ── TOPBAR ── -->
-      <header class="topbar">
-        <div class="container topbar-inner">
-          <div class="brand" data-reveal="fade" style="--d: 30ms">
-            <span class="sig">uvz0</span>
-            <span class="dot"></span>
-            <button class="muted egg-btn" id="brand-btn">student dev</button>
-          </div>
-          <nav class="nav">
-            <button
-              class="navlink"
-              data-magnetic
-              data-reveal="fade"
-              style="--d: 90ms"
-              onclick="scrollToId('projects')"
-            >
-              Projects
-            </button>
-            <button
-              class="navlink"
-              data-magnetic
-              data-reveal="fade"
-              style="--d: 120ms"
-              onclick="scrollToId('skills')"
-            >
-              Skills
-            </button>
-            <button
-              class="navlink"
-              data-magnetic
-              data-reveal="fade"
-              style="--d: 150ms"
-              onclick="scrollToId('hire')"
-            >
-              Hire Me?
-            </button>
-            <button
-              class="btn hidden"
-              id="music-btn"
-              data-magnetic
-              data-reveal="fade"
-              style="--d: 180ms"
-              aria-label="toggle music"
-            >
-              <span class="pill" id="music-label">music: on</span>
-            </button>
-          </nav>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <div class="brand" data-reveal="fade" style="--d:30ms">
+          <span class="sig">uvz0</span>
+          <span class="dot"></span>
+          <button class="muted egg-btn" id="brand-btn">student dev</button>
         </div>
-      </header>
+        <nav class="nav">
+          <button class="navlink" data-magnetic data-reveal="fade" style="--d:80ms"  onclick="scrollToId('projects')">projects</button>
+          <button class="navlink" data-magnetic data-reveal="fade" style="--d:110ms" onclick="scrollToId('skills')">skills</button>
+          <button class="navlink" data-magnetic data-reveal="fade" style="--d:140ms" onclick="scrollToId('hire')">hire me?</button>
+          <button class="btn hidden" id="music-btn" data-magnetic data-reveal="fade" style="--d:170ms" aria-label="toggle music">
+            <span class="pill" id="music-label">music: on</span>
+          </button>
+        </nav>
+      </div>
+    </header>
 
-      <!-- ── HERO ── -->
-      <section class="section hero">
-        <div class="container">
-          <p class="kicker" data-reveal="fade" style="--d: 60ms">
-            <span class="contest-badge"
-              >🏆 National-Level Contest Certified</span>
-            • Creative UI/UX • Ships Things
-          </p>
-          <h1 class="h1" data-reveal="pop" style="--d: 120ms">
-            I'm <span class="glow" id="glow-rehan">Jayed</span>
-            I Build Tools With <span class="good">Good</span> Manners and <span class="bad">Bad</span> Intentions.
-          </h1>
-          <p class="lede" data-reveal="pop" style="--d: 180ms">
-            Student Software Developer With A National-Level Programming Contest
-            Certification. I've Built
-            <span class="em">matha-lib</span> (A Python Package For
-            math/plotting/sorting/ML/distributions/calculus/algebra),
-            <span class="em">hyprcursor-sync-git</span> (AUR Cursor-sync chaos
-            control), And A Cross-Platform
-            <span class="em">Tauri authenticator</span> For Linux/Windows/MacOS.
-            I Code in JavaScript, Python, C++, And ESP32 When Hardware Needs A
-            Reason To Fear Me. I Also Do UI/UX In Figma and Inkscape, So Even
-            The Haunted Parts Look Polished.
-          </p>
-          <div class="row ctas" data-reveal="fade" style="--d: 240ms">
-            <button
-              class="btn primary"
-              data-magnetic
-              onclick="scrollToId('projects')"
-            >
-              Enter The Projects
-            </button>
-            <a class="btn" data-magnetic href="mailto:rehanjayed01@gmail.com"
-              >Email Me</a
-            >
-            <a
-              class="btn"
-              data-magnetic
-              href="https://github.com/uvz0"
-              target="_blank"
-              rel="noreferrer"
-              >Github</a
-            >
-          </div>
-          <div class="divider"></div>
-          <div class="stats">
-            <div
-              class="card stat"
-              data-tilt
-              data-reveal="pop"
-              style="--d: 300ms"
-            >
-              <div class="stat-num">3</div>
-              <div class="stat-label">Things I'm Proud Of (So Far)</div>
-            </div>
-            <div
-              class="card stat"
-              data-tilt
-              data-reveal="pop"
-              style="--d: 340ms"
-            >
-              <div class="stat-num">∞</div>
-              <div class="stat-label">Tabs I Keep Open</div>
-            </div>
-            <div
-              class="card stat"
-              data-tilt
-              data-reveal="pop"
-              style="--d: 380ms"
-            >
-              <div class="stat-num">0</div>
-              <div class="stat-label">Interest in Boring UI</div>
-            </div>
-          </div>
+    <section class="section hero">
+      <div class="container">
+        <p class="kicker" data-reveal="fade" style="--d:60ms">
+          <span class="contest-badge">✦ national-level contest certified</span> · creative UI/UX · ships things
+        </p>
+        <h1 class="h1" data-reveal="pop" style="--d:120ms">
+          i'm <span class="glow" id="glow-rehan">Jayed</span> —<br/>
+          i build tools with good manners<br/>and bad intentions.
+        </h1>
+        <p class="lede" data-reveal="pop" style="--d:180ms">
+          Student software developer drifting through code and space.
+          Built <span class="em">matha-lib</span> (Python math/ML package),
+          <span class="em">hyprcursor-sync-git</span> (AUR cursor-sync chaos control),
+          and a cross-platform <span class="em">Tauri authenticator</span>.
+          JavaScript · Python · C++ · ESP32 · Figma · Inkscape.
+        </p>
+        <div class="row ctas" data-reveal="fade" style="--d:240ms">
+          <button class="btn primary" data-magnetic onclick="scrollToId('projects')">explore projects</button>
+          <a class="btn" data-magnetic href="mailto:rehanjayed01@gmail.com">email me</a>
+          <a class="btn" data-magnetic href="https://github.com/uvz0" target="_blank" rel="noreferrer">github</a>
         </div>
-      </section>
-
-      <!-- ── PROJECTS ── (populated by JS) -->
-      <section id="projects" class="section">
-        <div class="container">
-          <p class="kicker" data-reveal="fade" style="--d: 40ms">projects</p>
-          <h2 class="h2" data-reveal="pop" style="--d: 90ms">
-            Things I Built So Recruiters Don't Have To Imagine.
-          </h2>
-          <p class="lede" data-reveal="pop" style="--d: 140ms">
-            Each One Is Practical, A Little Obsessive, And Designed To Not Fall
-            Apart When You Look At It.
-          </p>
-          <div class="grid projects" id="projects-grid"></div>
-        </div>
-      </section>
-
-      <!-- ── SKILLS ── (populated by JS) -->
-      <section id="skills" class="section">
-        <div class="container">
-          <p class="kicker" data-reveal="fade" style="--d: 40ms">skills</p>
-          <h2 class="h2" data-reveal="pop" style="--d: 90ms">
-            Tools I Use To Summon Results.
-          </h2>
-          <div class="grid skills" id="skills-grid"></div>
-        </div>
-      </section>
-
-      <!-- ── HIRE ── -->
-      <section id="hire" class="section">
-        <div class="container">
-          <p class="kicker" data-reveal="fade" style="--d: 40ms">final boss</p>
-          <h2 class="h2" data-reveal="pop" style="--d: 90ms">
-            If You Were To Hire Someone, Would You Hire Me?
-          </h2>
-          <div class="card hire" data-tilt data-reveal="pop" style="--d: 150ms">
-            <p class="lede" style="margin-top: 0">
-              Be honest. I can take it. (This page, however, might take it
-              personally.)
-            </p>
-            <div class="row" style="margin-top: 14px">
-              <button class="btn primary" data-magnetic id="yes-btn">
-                YEP
-              </button>
-              <button class="btn danger" data-magnetic id="no-btn">Hell nah</button>
-            </div>
-            <div class="toast hidden" id="thanks-toast" role="status">
-              thanks!
-            </div>
+        <div class="divider"></div>
+        <div class="stats">
+          <div class="card stat" data-tilt data-reveal="pop" style="--d:300ms">
+            <div class="stat-num">3</div>
+            <div class="stat-label">things i'm proud of (so far)</div>
           </div>
-        </div>
-      </section>
-
-      <!-- ── FOOTER ── -->
-      <footer class="footer">
-        <div class="container footer-inner">
-          <div>
-            <div class="muted" data-reveal="fade" style="--d: 40ms">
-              Built By Jayed • Powered By Caffeine And Unacceptable Curiosity
-            </div>
-            <div class="secret-hint" data-reveal="fade" style="--d: 60ms">
-              pst... try the konami code ⬆️ ⬆️ ⬇️ ⬇️ ⬅️ ➡️ ⬅️ ➡️ B A
-            </div>
+          <div class="card stat" data-tilt data-reveal="pop" style="--d:340ms">
+            <div class="stat-num">∞</div>
+            <div class="stat-label">tabs i keep open</div>
           </div>
-          <div class="row">
-            <a
-              class="footlink"
-              data-magnetic
-              href="mailto:rehanjayed01@gmail.com"
-              >rehanjayed01@gmail.com</a
-            >
-            <a
-              class="footlink"
-              data-magnetic
-              href="https://github.com/uvz0"
-              target="_blank"
-              rel="noreferrer"
-              >github: uvz0</a
-            >
-            <a
-              class="footlink"
-              data-magnetic
-              href="https://instagram.com/astro_ren0"
-              target="_blank"
-              rel="noreferrer"
-              >instagram: @astro_ren0</a
-            >
-          </div>
-        </div>
-      </footer>
-
-      <!-- ── HEADPHONES OVERLAY ── -->
-      <div
-        class="overlay"
-        id="headphones-overlay"
-        role="dialog"
-        aria-modal="true"
-        aria-label="headphones"
-      >
-        <div class="modal card" data-tilt data-reveal="pop" style="--d: 60ms">
-          <div class="kicker">before we start</div>
-          <div class="modal-title">Use headphones for a better experience.</div>
-          <p class="muted" style="margin: 8px 0 0">
-            This site plays lo-fi music. Autoplay is blocked by browsers, so
-            you'll have to allow it.
-          </p>
-          <div class="row" style="margin-top: 14px">
-            <button class="btn primary" data-magnetic id="hp-yes">
-              ok, play it
-            </button>
-            <button class="btn" data-magnetic id="hp-no">no thanks</button>
+          <div class="card stat" data-tilt data-reveal="pop" style="--d:380ms">
+            <div class="stat-num">0</div>
+            <div class="stat-label">interest in boring UI</div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- ── INTRO OVERLAY ── -->
-      <div
-        class="overlay hidden"
-        id="intro-overlay"
-        role="dialog"
-        aria-modal="true"
-        aria-label="intro sequence"
-        tabindex="0"
-      >
-        <div class="intro card" data-tilt data-reveal="pop" style="--d: 40ms">
-          <div class="kicker">tap to continue • space works too</div>
-          <div class="intro-line">
-            <span class="cursor" id="intro-cursor" aria-hidden="true">▌</span>
-            <span id="intro-text"></span>
+    <section id="projects" class="section">
+      <div class="container">
+        <p class="kicker" data-reveal="fade" style="--d:40ms">projects</p>
+        <h2 class="h2" data-reveal="pop" style="--d:90ms">things i built so recruiters don't have to imagine.</h2>
+        <p class="lede" data-reveal="pop" style="--d:140ms">Each one practical, a little obsessive, designed to not fall apart when you look at it.</p>
+        <div class="grid projects" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <p class="kicker" data-reveal="fade" style="--d:40ms">skills</p>
+        <h2 class="h2" data-reveal="pop" style="--d:90ms">tools i use to summon results.</h2>
+        <div class="grid skills" id="skills-grid"></div>
+      </div>
+    </section>
+
+    <section id="hire" class="section">
+      <div class="container">
+        <p class="kicker" data-reveal="fade" style="--d:40ms">final boss</p>
+        <h2 class="h2" data-reveal="pop" style="--d:90ms">If you were to hire someone, would you hire me?</h2>
+        <div class="card hire" data-tilt data-reveal="pop" style="--d:150ms">
+          <p class="lede" style="margin-top:0">Be honest. I can take it. (This page, however, might take it personally.)</p>
+          <div class="row" style="margin-top:14px">
+            <button class="btn primary" data-magnetic id="yes-btn">yes</button>
+            <button class="btn danger"  data-magnetic id="no-btn">no</button>
           </div>
-          <div class="row" style="margin-top: 14px">
-            <button class="btn primary" data-magnetic id="intro-next-btn">
-              skip typing
-            </button>
-            <button class="btn hidden" data-magnetic id="intro-music-btn">
-              mute
-            </button>
-          </div>
+          <div class="toast hidden" id="thanks-toast" role="status">✦ thanks, you're a star!</div>
         </div>
       </div>
+    </section>
 
-      <!-- ── JUMPSCARE OVERLAY ── -->
-      <div
-        class="overlay jumpscare hidden"
-        id="jumpscare-overlay"
-        role="status"
-        aria-live="assertive"
-      >
-        <img
-          id="jumpscare-img"
-          src=""
-          alt="A sudden, dramatic screen-filling image."
-          class="jumpscare-img"
-        />
-        <audio id="jumpscare-audio"></audio>
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="muted" data-reveal="fade" style="--d:40ms">built by jayed · powered by caffeine and the void</div>
+          <div class="secret-hint" id="konami-hint" data-reveal="fade" style="--d:60ms">⬆ ⬆ ⬇ ⬇ ⬅ ➡ ⬅ ➡ B A · a secret awaits</div>
+        </div>
+        <div class="row">
+          <a class="footlink" data-magnetic href="mailto:rehanjayed01@gmail.com">rehanjayed01@gmail.com</a>
+          <a class="footlink" data-magnetic href="https://github.com/uvz0" target="_blank" rel="noreferrer">github: uvz0</a>
+          <a class="footlink" data-magnetic href="https://instagram.com/astro_ren0" target="_blank" rel="noreferrer">instagram: @astro_ren0</a>
+        </div>
       </div>
-    </main>
+    </footer>
 
-    
-  </body>
+    <!-- HEADPHONES OVERLAY -->
+    <div class="overlay" id="headphones-overlay" role="dialog" aria-modal="true">
+      <div class="modal card" data-tilt data-reveal="pop" style="--d:60ms">
+        <div class="kicker">before we launch</div>
+        <div class="modal-title">Put on your headphones.</div>
+        <p class="muted" style="margin:10px 0 0">Lo-fi music ahead. Autoplay requires your permission.</p>
+        <div class="row" style="margin-top:16px">
+          <button class="btn primary" data-magnetic id="hp-yes">ok, play it</button>
+          <button class="btn"         data-magnetic id="hp-no">no thanks</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTRO OVERLAY -->
+    <div class="overlay hidden" id="intro-overlay" role="dialog" aria-modal="true" tabindex="0">
+      <div class="intro card" data-tilt data-reveal="pop" style="--d:40ms">
+        <div class="kicker">tap to continue · space works too</div>
+        <div class="intro-line">
+          <span class="cursor" id="intro-cursor" aria-hidden="true">▌</span>
+          <span id="intro-text"></span>
+        </div>
+        <div class="row" style="margin-top:16px">
+          <button class="btn primary" data-magnetic id="intro-next-btn">skip typing</button>
+          <button class="btn hidden"  data-magnetic id="intro-music-btn">mute</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- JUMPSCARE OVERLAY -->
+    <div class="overlay jumpscare hidden" id="jumpscare-overlay" role="status" aria-live="assertive">
+      <img id="jumpscare-img" src="" alt="" class="jumpscare-img"/>
+      <audio id="jumpscare-audio"></audio>
+    </div>
+
+    <!-- KONAMI OVERLAY -->
+    <div class="overlay hidden" id="konami-overlay" aria-hidden="true">
+      <canvas id="konami-canvas"></canvas>
+      <div class="konami-msg">
+        <div class="konami-title">✦ you found it ✦</div>
+        <div class="konami-sub">the void acknowledges your dedication</div>
+        <button class="btn primary" data-magnetic id="konami-close">return to earth</button>
+      </div>
+    </div>
+
+  </main>
+  <script src="app.js"></script>
+</body>
 </html>
